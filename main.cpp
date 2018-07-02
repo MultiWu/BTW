@@ -256,9 +256,16 @@ int dzielenie()
     cout << "Przez ile?" << endl;
     cin >> liczba2;
     system("cls");
-    cout << "Wynik to " << liczba / liczba2 << "." << endl;
+    if (liczba2 == 0) {
+        cout << "Nie probuj wprowadzic mnie w blad!!!" << endl;
+        Sleep(1750);
+        menu();
+    }
+    else {
+        cout << "Wynik to " << liczba / liczba2 << "." << endl;
     system("pause");
     koniec();
+    }
 }
 
 int dodawanie()
