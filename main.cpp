@@ -11,6 +11,9 @@ int koniec();
 int tabliczka();
 int mnozenie();
 int dzielenie();
+int dodawanie();
+int odejmowanie();
+
 
 
 int main()
@@ -42,13 +45,23 @@ int main()
     cout << "C. Tabliczka mnozenia" << endl;
     cout << "D. Mnozenie" << endl;
     cout << "E. Dzielenie" << endl;
+    cout << "F. Dodawanie" << endl;
+    cout << "G. Odejmowanie" << endl;
     cout << "" << endl;
+    cout << "X. Wyjscie" << endl;
+    cout << "v0.0.1-beta.2" << endl;
     cout << "Program by MultiWu @ 2018" << endl;
     cout << "" << endl;
     cin >> wybor;
 
     if (wybor == "A" || wybor == "a") {
         first();
+    }
+    else if (wybor == "X" || wybor == "x") {
+        system("cls");
+        cout << "Do zobaczenia !!" << endl;
+        Sleep(2500);
+        return 0;
     }
     else if (wybor == "B" || wybor == "b") {
         two();
@@ -61,6 +74,12 @@ int main()
     }
     else if (wybor == "E" || wybor == "e") {
         dzielenie();
+    }
+    else if (wybor == "F" || wybor == "f") {
+        dodawanie();
+    }
+    else if (wybor == "G" || wybor == "g") {
+        odejmowanie();
     }
     else {
         system("cls");
@@ -87,6 +106,7 @@ int koniec()
         cout << "Do zobaczenia !!" << endl;
         cout << "Program by OliwierGL @ 2018" << endl;
         Sleep(5000);
+        return 0;
     }
 }
 
@@ -133,12 +153,22 @@ int menu()
     cout << "C. Tabliczka mnozenia" << endl;
     cout << "D. Mnozenie" << endl;
     cout << "E. Dzielenie" << endl;
+    cout << "F. Dodawanie" << endl;
+    cout << "G. Odejmowanie" << endl;
     cout << "" << endl;
+    cout << "X. Wyjscie" << endl;
+    cout << "v0.0.1-beta.2" << endl;
     cout << "Program by MultiWu @ 2018" << endl;
     cout << "" << endl;
     cin >> wybor;
     if (wybor == "A" || wybor == "a") {
         first();
+    }
+    else if (wybor == "X" || wybor == "x") {
+        system("cls");
+        cout << "Do zobaczenia !!" << endl;
+        Sleep(2500);
+        return 0;
     }
     else if (wybor == "B" || wybor == "b") {
         two();
@@ -151,6 +181,12 @@ int menu()
     }
     else if (wybor == "E" || wybor == "e") {
         dzielenie();
+    }
+    else if (wybor == "F" || wybor == "f") {
+        dodawanie();
+    }
+    else if (wybor == "G" || wybor == "g") {
+        odejmowanie();
     }
     else {
         system("cls");
@@ -188,6 +224,7 @@ int tabliczka()
     Sleep(150);
     cout << "------------------------------------------------" << endl;
     cout << "" << endl;
+    cout << "v0.0.1-beta.2" << endl;
     cout << "Program by MultiWu @ 2018" << endl;
     system("pause");
     koniec();
@@ -220,6 +257,37 @@ int dzielenie()
     cin >> liczba2;
     system("cls");
     cout << "Wynik to " << liczba / liczba2 << "." << endl;
+    system("pause");
+    koniec();
+}
+
+int dodawanie()
+{
+    system("cls");
+    double liczba;
+    double liczba2;
+    cout << "Jaka liczbe chcesz dodac?" << endl;
+    cin >> liczba;
+    system("cls");
+    cout << "Do ilu?" << endl;
+    cin >> liczba2;
+    system("cls");
+    cout << "Wynik to " << liczba + liczba2 << "." << endl;
+    system("pause");
+    koniec();
+}
+int odejmowanie()
+{
+    system("cls");
+    double liczba;
+    double liczba2;
+    cout << "Jaka liczbe chcesz odjac?" << endl;
+    cin >> liczba;
+    system("cls");
+    cout << "Od ilu?" << endl;
+    cin >> liczba2;
+    system("cls");
+    cout << "Wynik to " << liczba - liczba2 << "." << endl;
     system("pause");
     koniec();
 }
