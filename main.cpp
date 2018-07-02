@@ -49,7 +49,7 @@ int main()
     cout << "G. Odejmowanie" << endl;
     cout << "" << endl;
     cout << "X. Wyjscie" << endl;
-    cout << "v0.0.1-beta.2" << endl;
+    cout << "v0.0.1-beta.3" << endl;
     cout << "Program by MultiWu @ 2018" << endl;
     cout << "" << endl;
     cin >> wybor;
@@ -157,7 +157,7 @@ int menu()
     cout << "G. Odejmowanie" << endl;
     cout << "" << endl;
     cout << "X. Wyjscie" << endl;
-    cout << "v0.0.1-beta.2" << endl;
+    cout << "v0.0.1-beta.3" << endl;
     cout << "Program by MultiWu @ 2018" << endl;
     cout << "" << endl;
     cin >> wybor;
@@ -224,7 +224,7 @@ int tabliczka()
     Sleep(150);
     cout << "------------------------------------------------" << endl;
     cout << "" << endl;
-    cout << "v0.0.1-beta.2" << endl;
+    cout << "v0.0.1-beta.3" << endl;
     cout << "Program by MultiWu @ 2018" << endl;
     system("pause");
     koniec();
