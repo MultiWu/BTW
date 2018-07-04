@@ -17,6 +17,7 @@ int mnozenie(); // Funkcja odpowiadajaca za mnozenie
 int dzielenie(); // Funkcja odpowiadajaca za dzielenie
 int dodawanie(); // Funkcja odpowiadajaca za dodawanie
 int odejmowanie(); // Funkcja odpowiadajaca za odejmowanie
+int dzientygodnia(); // Funkcja odpowiadajaca za obliczanie dnia tygodnia
 
 int koniec2(); // Funkcja odpowiadajaca za konczenie programu (ANGIELSKI)
 int first2(); // Funkcja odpowiadajaca za zamiane cm na metry (ANGIELSKI)
@@ -27,6 +28,7 @@ int mnozenie2(); // Funkcja odpowiadajaca za mnozenie (ANGIELSKI)
 int dzielenie2(); // Funkcja odpowiadajaca za dzielenie (ANGIELSKI)
 int dodawanie2(); // Funkcja odpowiadajaca za dodawanie (ANGIELSKI)
 int odejmowanie2(); // Funkcja odpowiadajaca za odejmowanie (ANGIELSKI)
+int dzientygodnia2(); // Funkcja odpowiadajaca za obliczanie dnia tygodnia (ANGIELSKI)
 
 int main()
 {
@@ -74,9 +76,10 @@ int polski()
     cout << "E. Dzielenie" << endl;
     cout << "F. Dodawanie" << endl;
     cout << "G. Odejmowanie" << endl;
+    cout << "H. Obliczenie dnia tygodnia na podstawie daty" << endl;
     cout << "" << endl;
     cout << "X. Wyjscie" << endl;
-    cout << "v0.0.1-beta.4" << endl;
+    cout << "v0.0.1-beta.5" << endl;
     cout << "Program by MultiWu @ 2018" << endl;
     cout << "" << endl;
     cin >> wybor;
@@ -107,6 +110,9 @@ int polski()
     }
     else if (wybor == "G" || wybor == "g") {
         odejmowanie();
+    }
+    else if (wybor == "H" || wybor == "h") {
+        dzientygodnia();
     }
     else {
         system("cls");
@@ -145,9 +151,10 @@ int english()
     cout << "E. Split" << endl;
     cout << "F. Addition" << endl;
     cout << "G. Subtraction" << endl;
+    cout << "H. Calculation of the day of the week based on the date" << endl;
     cout << "" << endl;
     cout << "X. Exit" << endl;
-    cout << "v0.0.1-beta.4" << endl;
+    cout << "v0.0.1-beta.5" << endl;
     cout << "Program by MultiWu @ 2018" << endl;
     cout << "" << endl;
     cin >> wybor;
@@ -178,6 +185,9 @@ int english()
     }
     else if (wybor == "G" || wybor == "g") {
         odejmowanie2();
+    }
+    else if (wybor == "H" || wybor == "h") {
+        dzientygodnia2();
     }
     else {
         system("cls");
@@ -302,9 +312,10 @@ int menu()
     cout << "E. Dzielenie" << endl;
     cout << "F. Dodawanie" << endl;
     cout << "G. Odejmowanie" << endl;
+    cout << "H. Obliczenie dnia tygodnia na podstawie daty" << endl;
     cout << "" << endl;
     cout << "X. Wyjscie" << endl;
-    cout << "v0.0.1-beta.4" << endl;
+    cout << "v0.0.1-beta.5" << endl;
     cout << "Program by MultiWu @ 2018" << endl;
     cout << "" << endl;
     cin >> wybor;
@@ -335,6 +346,9 @@ int menu()
     else if (wybor == "G" || wybor == "g") {
         odejmowanie();
     }
+    else if (wybor == "H" || wybor == "h") {
+        dzientygodnia();
+    }
     else {
         system("cls");
         cout << "Do zobaczenia !!" << endl;
@@ -354,9 +368,10 @@ int menu2()
     cout << "E. Split" << endl;
     cout << "F. Addition" << endl;
     cout << "G. Subtraction" << endl;
+    cout << "H. Calculation of the day of the week based on the date" << endl;
     cout << "" << endl;
     cout << "X. Exit" << endl;
-    cout << "v0.0.1-beta.4" << endl;
+    cout << "v0.0.1-beta.5" << endl;
     cout << "Program by MultiWu @ 2018" << endl;
     cout << "" << endl;
     cin >> wybor;
@@ -387,6 +402,9 @@ int menu2()
     }
     else if (wybor == "G" || wybor == "g") {
         odejmowanie2();
+    }
+    else if (wybor == "H" || wybor == "h") {
+        dzientygodnia2();
     }
     else {
         system("cls");
@@ -425,7 +443,7 @@ int tabliczka()
     Sleep(150);
     cout << "------------------------------------------------" << endl;
     cout << "" << endl;
-    cout << "v0.0.1-beta.4" << endl;
+    cout << "v0.0.1-beta.5" << endl;
     cout << "Program by MultiWu @ 2018" << endl;
     system("pause");
     koniec();
@@ -461,7 +479,7 @@ int tabliczka2()
     Sleep(150);
     cout << "------------------------------------------------" << endl;
     cout << "" << endl;
-    cout << "v0.0.1-beta.4" << endl;
+    cout << "v0.0.1-beta.5" << endl;
     cout << "Program by MultiWu @ 2018" << endl;
     system("pause");
     koniec2();
@@ -607,4 +625,90 @@ int odejmowanie2()
     cout << "The result is " << liczba2 - liczba << "." << endl;
     system("pause");
     koniec2();
+}
+
+int dzientygodnia()
+{
+int rok, miesiac, dzien, ile_przestepnych, przestepnosc, przestepny;
+int ile_dni, nazwa_dnia, k;
+int tablica[12]={0,31,59,90,120,151,181,212,243,273,304,334};
+char *dni[]={"Niedziela", "Poniedzialek", "Wtorek", "Sroda", "Czwartek", "Piatek", "Sobota"};
+
+system("cls");
+cout << "Podaj rok:" << endl;
+cin >> rok;
+cout<< "Podaj miesiac:" << endl;
+cin >> miesiac;
+cout << "Podaj dzien:" << endl;
+cin >> dzien;
+
+if ((rok%4 == 0  &&  rok%100 != 0) || rok%400 == 0) {
+	przestepnosc=1;
+} else { przestepnosc=0; }
+
+k=0;
+for(int l=1; l<rok; l++) {
+	if((l%4==0  &&  l%100!=0) || l%400 == 0) {
+		k=k+1;
+	}
+}
+
+system("cls");
+cout << "Lat przestepnych bylo: " << k << endl;
+
+if(przestepnosc==1 && miesiac>=2) { tablica[miesiac-1]=tablica[miesiac-1]+1; }
+
+ile_dni=((((rok-k)*365) + (k)*366) + tablica[miesiac-1] + dzien); // ilosc wszystkich dni
+
+nazwa_dnia=ile_dni%7;
+
+cout << "Dzien tygodnia w tym dniu to ";
+cout << dni[nazwa_dnia-1] << endl;
+
+system ("pause");
+koniec();
+
+}
+
+int dzientygodnia2()
+{
+int rok, miesiac, dzien, ile_przestepnych, przestepnosc, przestepny;
+int ile_dni, nazwa_dnia, k;
+int tablica[12]={0,31,59,90,120,151,181,212,243,273,304,334};
+char *dni[]={"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+
+system("cls");
+cout << "Enter the year:" << endl;
+cin >> rok;
+cout<< "Give me a month:" << endl;
+cin >> miesiac;
+cout << "Enter the day:" << endl;
+cin >> dzien;
+
+if ((rok%4 == 0  &&  rok%100 != 0) || rok%400 == 0) {
+	przestepnosc=1;
+} else { przestepnosc=0; }
+
+k=0;
+for(int l=1; l<rok; l++) {
+	if((l%4==0  &&  l%100!=0) || l%400 == 0) {
+		k=k+1;
+	}
+}
+
+system("cls");
+cout << "Years were delinquent: " << k << endl;
+
+if(przestepnosc==1 && miesiac>=2) { tablica[miesiac-1]=tablica[miesiac-1]+1; }
+
+ile_dni=((((rok-k)*365) + (k)*366) + tablica[miesiac-1] + dzien); // ilosc wszystkich dni
+
+nazwa_dnia=ile_dni%7;
+
+cout << "The day of the week on this day is ";
+cout << dni[nazwa_dnia-1] << endl;
+
+system ("pause");
+koniec2();
+
 }
