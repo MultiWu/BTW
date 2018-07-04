@@ -5,8 +5,8 @@ Nowa wersja co dwa dni o godz. 19:45
 Funkcje:
 A. cm -> m
 B. m -> cm
-C. Tabliczka mnozenia
-D. Mnozenie
+C. Tabliczka mnożenia
+D. Mnożenie
 E. Dzielenie
 F. Dodawanie
 G. Odejmowanie
