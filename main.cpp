@@ -11,7 +11,7 @@ int english(); // Angielski
 int koniec(); // Funkcja odpowiadajaca za konczenie programu
 int first(); // Funkcja odpowiadajaca za zamiane cm na metry
 int two(); // Funkcja odpowiadajaca za zamiane metrow na cm
-int menu(); // Funkcja odpowiadajaca za menuu glowne
+int menu(); // Funkcja odpowiadajaca za menu glowne
 int tabliczka(); // Funkcja odpowiadajaca za wyswietlenie tabliczki mnozenia
 int mnozenie(); // Funkcja odpowiadajaca za mnozenie
 int dzielenie(); // Funkcja odpowiadajaca za dzielenie
@@ -22,7 +22,7 @@ int dzientygodnia(); // Funkcja odpowiadajaca za obliczanie dnia tygodnia
 int koniec2(); // Funkcja odpowiadajaca za konczenie programu (ANGIELSKI)
 int first2(); // Funkcja odpowiadajaca za zamiane cm na metry (ANGIELSKI)
 int two2(); // Funkcja odpowiadajaca za zamiane metrow na cm (ANGIELSKI)
-int menu2(); // Funkcja odpowiadajaca za menuu glowne (ANGIELSKI)
+int menu2(); // Funkcja odpowiadajaca za menu glowne (ANGIELSKI)
 int tabliczka2(); // Funkcja odpowiadajaca za wyswietlenie tabliczki mnozenia (ANGIELSKI)
 int mnozenie2(); // Funkcja odpowiadajaca za mnozenie (ANGIELSKI)
 int dzielenie2(); // Funkcja odpowiadajaca za dzielenie (ANGIELSKI)
@@ -79,7 +79,7 @@ int polski()
     cout << "H. Obliczenie dnia tygodnia na podstawie daty" << endl;
     cout << "" << endl;
     cout << "X. Wyjscie" << endl;
-    cout << "v0.0.1-beta.5" << endl;
+    cout << "v0.0.1-beta.6" << endl;
     cout << "Program by MultiWu @ 2018" << endl;
     cout << "" << endl;
     cin >> wybor;
@@ -154,7 +154,7 @@ int english()
     cout << "H. Calculation of the day of the week based on the date" << endl;
     cout << "" << endl;
     cout << "X. Exit" << endl;
-    cout << "v0.0.1-beta.5" << endl;
+    cout << "v0.0.1-beta.6" << endl;
     cout << "Program by MultiWu @ 2018" << endl;
     cout << "" << endl;
     cin >> wybor;
@@ -315,7 +315,7 @@ int menu()
     cout << "H. Obliczenie dnia tygodnia na podstawie daty" << endl;
     cout << "" << endl;
     cout << "X. Wyjscie" << endl;
-    cout << "v0.0.1-beta.5" << endl;
+    cout << "v0.0.1-beta.6" << endl;
     cout << "Program by MultiWu @ 2018" << endl;
     cout << "" << endl;
     cin >> wybor;
@@ -371,7 +371,7 @@ int menu2()
     cout << "H. Calculation of the day of the week based on the date" << endl;
     cout << "" << endl;
     cout << "X. Exit" << endl;
-    cout << "v0.0.1-beta.5" << endl;
+    cout << "v0.0.1-beta.6" << endl;
     cout << "Program by MultiWu @ 2018" << endl;
     cout << "" << endl;
     cin >> wybor;
@@ -443,7 +443,7 @@ int tabliczka()
     Sleep(150);
     cout << "------------------------------------------------" << endl;
     cout << "" << endl;
-    cout << "v0.0.1-beta.5" << endl;
+    cout << "v0.0.1-beta.6" << endl;
     cout << "Program by MultiWu @ 2018" << endl;
     system("pause");
     koniec();
@@ -479,7 +479,7 @@ int tabliczka2()
     Sleep(150);
     cout << "------------------------------------------------" << endl;
     cout << "" << endl;
-    cout << "v0.0.1-beta.5" << endl;
+    cout << "v0.0.1-beta.6" << endl;
     cout << "Program by MultiWu @ 2018" << endl;
     system("pause");
     koniec2();
@@ -644,7 +644,11 @@ cin >> dzien;
 
 if ((rok%4 == 0  &&  rok%100 != 0) || rok%400 == 0) {
 	przestepnosc=1;
-} else { przestepnosc=0; }
+} else if (rok < 0 || miesiac < 0 || dzien < 0 ) {
+        cout << "Nie probuj wprowadzic mnie w blad!!!" << endl;
+        Sleep(1750);
+        menu();
+    } else { przestepnosc=0; }
 
 k=0;
 for(int l=1; l<rok; l++) {
@@ -687,7 +691,11 @@ cin >> dzien;
 
 if ((rok%4 == 0  &&  rok%100 != 0) || rok%400 == 0) {
 	przestepnosc=1;
-} else { przestepnosc=0; }
+} else if (rok < 0 || miesiac < 0 || dzien < 0 ) {
+        cout << "Do not try to put me in error !!!" << endl;
+        Sleep(1750);
+        menu2();
+    } else { przestepnosc=0; }
 
 k=0;
 for(int l=1; l<rok; l++) {
