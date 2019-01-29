@@ -1,6 +1,5 @@
 # BTW Beta Wersja: 0.0.1-beta.6
 
-Nowa wersja co dwa dni o godz. 19:45
 
 Funkcje:
 A. cm -> m
@@ -15,7 +14,6 @@ H. Obliczenie dnia tygodnia na podstawie daty
 
 # (English) BTW Beta Version: 0.0.1-beta.6
 
-New version every two days at 19:45
 
 A. cm -> m
 B. m -> cm
