@@ -18,6 +18,7 @@ int dzielenie(); // Funkcja odpowiadajaca za dzielenie
 int dodawanie(); // Funkcja odpowiadajaca za dodawanie
 int odejmowanie(); // Funkcja odpowiadajaca za odejmowanie
 int dzientygodnia(); // Funkcja odpowiadajaca za obliczanie dnia tygodnia
+int mwlang(); // Kompilator jezyka MWLang (Coming soon..)
 
 int koniec2(); // Funkcja odpowiadajaca za konczenie programu (ANGIELSKI)
 int first2(); // Funkcja odpowiadajaca za zamiane cm na metry (ANGIELSKI)
@@ -38,11 +39,20 @@ int main()
     cout << "[P]olski" << endl;
     cout << "[E]nglish" << endl;
     cin >> wybor;
-    if (wybor == "P" || wybor == "p") {
+    if (wybor == "P" || wybor == "p" || wybor == "polski" || wybor == "Polski") {
         polski();
     }
-    else if (wybor == "E" || wybor == "e") {
+    else if (wybor == "E" || wybor == "e" || wybor == "english" || wybor == "English") {
         english();
+    }
+    else {
+        system("cls");
+        cout << "Nie ma takiej opcji!" << endl;
+        cout << "No way!" << endl;
+        cout << "Popraw wybor!" << endl;
+        cout << "Improve your choice!" << endl;
+        Sleep(1250);
+        main();
     }
 }
 
@@ -77,10 +87,11 @@ int polski()
     cout << "F. Dodawanie" << endl;
     cout << "G. Odejmowanie" << endl;
     cout << "H. Obliczenie dnia tygodnia na podstawie daty" << endl;
+    cout << "Kompilator jezyka MWLang";
     cout << "" << endl;
     cout << "X. Wyjscie" << endl;
     cout << "v0.0.1-beta.6" << endl;
-    cout << "Program by MultiWu @ 2018" << endl;
+    cout << "Program by MultiWu @ 2018-2019" << endl;
     cout << "" << endl;
     cin >> wybor;
 
@@ -114,10 +125,14 @@ int polski()
     else if (wybor == "H" || wybor == "h") {
         dzientygodnia();
     }
+    else if (wybor == "I" || wybor == "i") {
+        mwlang();
+    }
     else {
         system("cls");
-        cout << "Do zobaczenia !!" << endl;
-        return 0;
+        cout << "Nieprawd³owa opcja !!" << endl;
+        cout << "Spróbuj jeszcze raz !!" << endl;
+        polski();
     }
 }
 
@@ -155,7 +170,7 @@ int english()
     cout << "" << endl;
     cout << "X. Exit" << endl;
     cout << "v0.0.1-beta.6" << endl;
-    cout << "Program by MultiWu @ 2018" << endl;
+    cout << "Program by MultiWu @ 2018-2019" << endl;
     cout << "" << endl;
     cin >> wybor;
 
@@ -191,8 +206,9 @@ int english()
     }
     else {
         system("cls");
-        cout << "Good bye !!" << endl;
-        return 0;
+        cout << "Incorrect option !!" << endl;
+        cout << "Try again !!" << endl;
+        english();
     }
 }
 
@@ -211,7 +227,7 @@ int koniec()
     else {
         system("cls");
         cout << "Do zobaczenia !!" << endl;
-        cout << "Program by OliwierGL @ 2018" << endl;
+        cout << "Program by MultiWu @ 2018-2019" << endl;
         Sleep(5000);
         return 0;
     }
@@ -231,7 +247,7 @@ int koniec2()
     else {
         system("cls");
         cout << "Good Bye !!" << endl;
-        cout << "Program by OliwierGL @ 2018" << endl;
+        cout << "Program by MultiWu @ 2018-2019" << endl;
         Sleep(5000);
         return 0;
     }
@@ -313,10 +329,11 @@ int menu()
     cout << "F. Dodawanie" << endl;
     cout << "G. Odejmowanie" << endl;
     cout << "H. Obliczenie dnia tygodnia na podstawie daty" << endl;
+    cout << "I. Kompilator jezyka MWLang" << endl;
     cout << "" << endl;
     cout << "X. Wyjscie" << endl;
     cout << "v0.0.1-beta.6" << endl;
-    cout << "Program by MultiWu @ 2018" << endl;
+    cout << "Program by MultiWu @ 2018-2019" << endl;
     cout << "" << endl;
     cin >> wybor;
     if (wybor == "A" || wybor == "a") {
@@ -349,9 +366,14 @@ int menu()
     else if (wybor == "H" || wybor == "h") {
         dzientygodnia();
     }
+    else if (wybor == "I" || wybor == "i") {
+        mwlang();
+    }
     else {
         system("cls");
-        cout << "Do zobaczenia !!" << endl;
+        cout << "Nieprawd³owa opcja !!" << endl;
+        cout << "Spróbuj jeszcze raz !!" << endl;
+        polski();
     }
 }
 
@@ -372,7 +394,7 @@ int menu2()
     cout << "" << endl;
     cout << "X. Exit" << endl;
     cout << "v0.0.1-beta.6" << endl;
-    cout << "Program by MultiWu @ 2018" << endl;
+    cout << "Program by MultiWu @ 2018-2019" << endl;
     cout << "" << endl;
     cin >> wybor;
 
@@ -408,8 +430,9 @@ int menu2()
     }
     else {
         system("cls");
-        cout << "Good bye !!" << endl;
-        Sleep(5000);
+        cout << "Incorrect option !!" << endl;
+        cout << "Try again !!" << endl;
+        english();
     }
 }
 
@@ -444,7 +467,7 @@ int tabliczka()
     cout << "------------------------------------------------" << endl;
     cout << "" << endl;
     cout << "v0.0.1-beta.6" << endl;
-    cout << "Program by MultiWu @ 2018" << endl;
+    cout << "Program by MultiWu @ 2018-2019" << endl;
     system("pause");
     koniec();
 }
@@ -479,8 +502,8 @@ int tabliczka2()
     Sleep(150);
     cout << "------------------------------------------------" << endl;
     cout << "" << endl;
-    cout << "v0.0.1-beta.6" << endl;
-    cout << "Program by MultiWu @ 2018" << endl;
+    cout << "v0.0.1-beta.7" << endl;
+    cout << "Program by MultiWu @ 2018-2019" << endl;
     system("pause");
     koniec2();
 }
@@ -627,96 +650,101 @@ int odejmowanie2()
     koniec2();
 }
 
-int dzientygodnia()
-{
-int rok, miesiac, dzien, ile_przestepnych, przestepnosc, przestepny;
-int ile_dni, nazwa_dnia, k;
-int tablica[12]={0,31,59,90,120,151,181,212,243,273,304,334};
-char *dni[]={"Niedziela", "Poniedzialek", "Wtorek", "Sroda", "Czwartek", "Piatek", "Sobota"};
+int dzientygodnia() {
+    int rok, miesiac, dzien, ile_przestepnych, przestepnosc, przestepny;
+    int ile_dni, nazwa_dnia, k;
+    int tablica[12]={0,31,59,90,120,151,181,212,243,273,304,334};
+    char *dni[]={"Niedziela", "Poniedzialek", "Wtorek", "Sroda", "Czwartek", "Piatek", "Sobota"};
 
-system("cls");
-cout << "Podaj rok:" << endl;
-cin >> rok;
-cout<< "Podaj miesiac:" << endl;
-cin >> miesiac;
-cout << "Podaj dzien:" << endl;
-cin >> dzien;
+    system("cls");
+    cout << "Podaj rok:" << endl;
+    cin >> rok;
+    cout<< "Podaj miesiac:" << endl;
+    cin >> miesiac;
+    cout << "Podaj dzien:" << endl;
+    cin >> dzien;
 
-if ((rok%4 == 0  &&  rok%100 != 0) || rok%400 == 0) {
-	przestepnosc=1;
-} else if (rok < 0 || miesiac < 0 || dzien < 0 ) {
+    if ((rok%4 == 0  &&  rok%100 != 0) || rok%400 == 0) {
+        przestepnosc=1;
+    } else if (rok < 0 || miesiac < 0 || dzien < 0 ) {
         cout << "Nie probuj wprowadzic mnie w blad!!!" << endl;
         Sleep(1750);
         menu();
     } else { przestepnosc=0; }
 
-k=0;
-for(int l=1; l<rok; l++) {
-	if((l%4==0  &&  l%100!=0) || l%400 == 0) {
-		k=k+1;
-	}
+    k=0;
+    for(int l=1; l<rok; l++) {
+        if((l%4==0  &&  l%100!=0) || l%400 == 0) {
+            k=k+1;
+        }
+    }
+
+    system("cls");
+    cout << "Lat przestepnych bylo: " << k << endl;
+
+    if(przestepnosc==1 && miesiac>=2) { tablica[miesiac-1]=tablica[miesiac-1]+1; }
+
+    ile_dni=((((rok-k)*365) + (k)*366) + tablica[miesiac-1] + dzien); // ilosc wszystkich dni
+
+    nazwa_dnia=ile_dni%7;
+
+    cout << "Dzien tygodnia w tym dniu to ";
+    cout << dni[nazwa_dnia-1] << endl;
+
+    system ("pause");
+    koniec();
+
 }
 
-system("cls");
-cout << "Lat przestepnych bylo: " << k << endl;
+int dzientygodnia2() {
+    int rok, miesiac, dzien, ile_przestepnych, przestepnosc, przestepny;
+    int ile_dni, nazwa_dnia, k;
+    int tablica[12]={0,31,59,90,120,151,181,212,243,273,304,334};
+    char *dni[]={"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
 
-if(przestepnosc==1 && miesiac>=2) { tablica[miesiac-1]=tablica[miesiac-1]+1; }
+    system("cls");
+    cout << "Enter the year:" << endl;
+    cin >> rok;
+    cout<< "Give me a month:" << endl;
+    cin >> miesiac;
+    cout << "Enter the day:" << endl;
+    cin >> dzien;
 
-ile_dni=((((rok-k)*365) + (k)*366) + tablica[miesiac-1] + dzien); // ilosc wszystkich dni
-
-nazwa_dnia=ile_dni%7;
-
-cout << "Dzien tygodnia w tym dniu to ";
-cout << dni[nazwa_dnia-1] << endl;
-
-system ("pause");
-koniec();
-
-}
-
-int dzientygodnia2()
-{
-int rok, miesiac, dzien, ile_przestepnych, przestepnosc, przestepny;
-int ile_dni, nazwa_dnia, k;
-int tablica[12]={0,31,59,90,120,151,181,212,243,273,304,334};
-char *dni[]={"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
-
-system("cls");
-cout << "Enter the year:" << endl;
-cin >> rok;
-cout<< "Give me a month:" << endl;
-cin >> miesiac;
-cout << "Enter the day:" << endl;
-cin >> dzien;
-
-if ((rok%4 == 0  &&  rok%100 != 0) || rok%400 == 0) {
-	przestepnosc=1;
-} else if (rok < 0 || miesiac < 0 || dzien < 0 ) {
+    if ((rok%4 == 0  &&  rok%100 != 0) || rok%400 == 0) {
+        przestepnosc=1;
+    } else if (rok < 0 || miesiac < 0 || dzien < 0 ) {
         cout << "Do not try to put me in error !!!" << endl;
         Sleep(1750);
         menu2();
     } else { przestepnosc=0; }
 
-k=0;
-for(int l=1; l<rok; l++) {
-	if((l%4==0  &&  l%100!=0) || l%400 == 0) {
-		k=k+1;
-	}
+    k=0;
+    for(int l=1; l<rok; l++) {
+        if((l%4==0  &&  l%100!=0) || l%400 == 0) {
+            k=k+1;
+        }
+    }
+
+    system("cls");
+    cout << "Years were delinquent: " << k << endl;
+
+    if(przestepnosc==1 && miesiac>=2) { tablica[miesiac-1]=tablica[miesiac-1]+1; }
+
+    ile_dni=((((rok-k)*365) + (k)*366) + tablica[miesiac-1] + dzien); // ilosc wszystkich dni
+
+    nazwa_dnia=ile_dni%7;
+
+    cout << "The day of the week on this day is ";
+    cout << dni[nazwa_dnia-1] << endl;
+
+    system ("pause");
+    koniec2();
+
 }
 
-system("cls");
-cout << "Years were delinquent: " << k << endl;
-
-if(przestepnosc==1 && miesiac>=2) { tablica[miesiac-1]=tablica[miesiac-1]+1; }
-
-ile_dni=((((rok-k)*365) + (k)*366) + tablica[miesiac-1] + dzien); // ilosc wszystkich dni
-
-nazwa_dnia=ile_dni%7;
-
-cout << "The day of the week on this day is ";
-cout << dni[nazwa_dnia-1] << endl;
-
-system ("pause");
-koniec2();
-
+int mwlang() {
+    system("cls");
+    cout << "Coming soon.." << endl;
+    Sleep(1250);
+    polski();
 }
