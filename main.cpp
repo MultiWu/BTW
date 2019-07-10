@@ -49,6 +49,7 @@ int main()
         cout << "Nie ma takiej opcji!" << endl;
         cout << "Popraw wybor!" << endl;
         Sleep(1250);
+        main();
     }
 }
 
