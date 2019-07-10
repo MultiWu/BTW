@@ -90,7 +90,7 @@ int polski()
     cout << "Kompilator jezyka MWLang";
     cout << "" << endl;
     cout << "X. Wyjscie" << endl;
-    cout << "v0.0.1-beta.6" << endl;
+    cout << "v0.0.1-beta.7" << endl;
     cout << "Program by MultiWu @ 2018-2019" << endl;
     cout << "" << endl;
     cin >> wybor;
@@ -169,7 +169,7 @@ int english()
     cout << "H. Calculation of the day of the week based on the date" << endl;
     cout << "" << endl;
     cout << "X. Exit" << endl;
-    cout << "v0.0.1-beta.6" << endl;
+    cout << "v0.0.1-beta.7" << endl;
     cout << "Program by MultiWu @ 2018-2019" << endl;
     cout << "" << endl;
     cin >> wybor;
@@ -332,7 +332,7 @@ int menu()
     cout << "I. Kompilator jezyka MWLang" << endl;
     cout << "" << endl;
     cout << "X. Wyjscie" << endl;
-    cout << "v0.0.1-beta.6" << endl;
+    cout << "v0.0.1-beta.7" << endl;
     cout << "Program by MultiWu @ 2018-2019" << endl;
     cout << "" << endl;
     cin >> wybor;
@@ -393,7 +393,7 @@ int menu2()
     cout << "H. Calculation of the day of the week based on the date" << endl;
     cout << "" << endl;
     cout << "X. Exit" << endl;
-    cout << "v0.0.1-beta.6" << endl;
+    cout << "v0.0.1-beta.7" << endl;
     cout << "Program by MultiWu @ 2018-2019" << endl;
     cout << "" << endl;
     cin >> wybor;
@@ -466,7 +466,7 @@ int tabliczka()
     Sleep(150);
     cout << "------------------------------------------------" << endl;
     cout << "" << endl;
-    cout << "v0.0.1-beta.6" << endl;
+    cout << "v0.0.1-beta.7" << endl;
     cout << "Program by MultiWu @ 2018-2019" << endl;
     system("pause");
     koniec();
