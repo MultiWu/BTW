@@ -44,6 +44,12 @@ int main()
     else if (wybor == "E" || wybor == "e") {
         english();
     }
+    else {
+        system("cls");
+        cout << "Nie ma takiej opcji!" << endl;
+        cout << "Popraw wybor!" << endl;
+        Sleep(1250);
+    }
 }
 
 int polski()
