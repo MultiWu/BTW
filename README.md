@@ -1,4 +1,4 @@
-# BTW Beta Wersja: 0.0.1-beta.6
+# BTW Beta Wersja: 0.0.1-beta.7
 
 
 Funkcje:
@@ -10,9 +10,10 @@ E. Dzielenie
 F. Dodawanie
 G. Odejmowanie
 H. Obliczenie dnia tygodnia na podstawie daty
+I. Kompilator MWLang (coming soon...)
 
 
-# (English) BTW Beta Version: 0.0.1-beta.6
+# (English) BTW Beta Version: 0.0.1-beta.7
 
 
 A. cm -> m
@@ -23,3 +24,4 @@ E. Split
 F. Addition
 G. Subtraction
 H. Calculation of the day of the week based on the date
+I. MWLang compiler (coming soon...)
